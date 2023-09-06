@@ -25,12 +25,35 @@ https://www.w3schools.com/css/css_align.asp
 
 */
 
+:root {
+    /* root vars for dialog */
+    --ratio: 3.74;
+    --cta-color: rgb(0, 102, 254);
+    --light-color-bg: rgb(238, 241, 247);
+    --dark-color-bg: rgb(55, 65, 81);
+    --grey-color: rgb(107, 114, 128);
+    --leading: 0.025em;
+  }
+
 * {
 
 }
 
+html {
+    height: 100%;
+}
+
+html, body {
+    min-height: 100%;
+}
+
 body {
     margin: 0;
+    overflow-y: scroll;
+}
+
+body:has(dialog[open]) {
+    overflow-y: hidden;
 }
 
 /* #red { background-color: red;}
@@ -100,7 +123,6 @@ p {
 .section {
     background-color: peachpuff;
     margin: auto;
-    margin-top: 200px;
     border: 3px outset black;
     border-color: grey;
     border-radius: 20px;

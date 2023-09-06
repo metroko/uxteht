@@ -4,10 +4,12 @@
 	<title>Positioning Items</title>
 	<meta charset="UTF-8">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dialog.css" />
+    <script src="dialog.js" defer></script>
 </head>
 
 <body>
-    <div class="container">
+<div class="container">
     <nav class="clearfix">
      <div class="box">Home</div>  
      <div class="box">About</div> 
@@ -15,11 +17,12 @@
      <div class="box">Box 4</div>  
      <div class="box">Box 5</div>
     </nav>
-
-<div class="clear"></div>
-
     <!-- Float continues, clearing -->
 <main>
+    <section id="spacer" style="height: 100px"; margin-top: 50px">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <button id="open_dialog">Open Dialog</button>
+    </section>
     <div class="section">
         <img class="floatimg" src="img/fz.png" alt="fz">
         <img src="img/dog.webp" alt="Pupper" class="pupper"= />
@@ -31,6 +34,7 @@
         Fugiat ut dolores repellat enim odio? Laborum rerum eligendi quas.
         Maiores pariatur quisquam earum veniam!
         Est, adipisci architecto similique veritatis hic unde?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quos officia modi repudiandae numquam! Perferendis vel enim autem quas pariatur sit incidunt molestias repellendus similique aspernatur fugiat neque ratione animi porro esse veritatis cupiditate est labore possimus iusto doloribus nesciunt, libero sapiente voluptatem! Commodi optio ab accusamus culpa! Vero officia praesentium earum dolores odio id eos similique, sit possimus beatae? Fuga sint commodi laboriosam deserunt porro iste modi asperiores minima excepturi odio maiores harum deleniti ex, alias facere? Inventore porro molestias, asperiores consectetur repudiandae sint aliquam explicabo minus facere accusantium. Eum molestiae excepturi repudiandae dolore laudantium nostrum dicta, dolorem, explicabo eius blanditiis quasi ipsa sequi repellendus rem quidem cupiditate? Fuga eum, consectetur a quaerat vitae veritatis eius repellendus explicabo nam debitis placeat ipsum illo recusandae numquam atque laboriosam cupiditate. Eius quae quam doloremque, ab dolore fugit sit? Iure in illum expedita, fuga dignissimos, facere mollitia delectus maiores sed error fugit est repellat at, tempore minus asperiores. Nobis voluptate blanditiis rerum doloribus soluta hic reprehenderit distinctio a, porro, sit excepturi nisi corrupti voluptatibus, eum et dolore commodi maxime voluptatem exercitationem modi maiores sequi necessitatibus. Minima, iste, non cumque odit quasi, commodi eligendi possimus accusamus dolorum pariatur explicabo veritatis? Numquam labore recusandae quidem quis, veritatis necessitatibus officiis impedit, quia veniam voluptatem ex magnam ducimus minus asperiores. Dolorum quam eaque dolor? Perspiciatis accusamus commodi voluptates laboriosam. Autem illum laboriosam mollitia molestiae magni nam repellat repudiandae. Nesciunt itaque repellat optio, quidem delectus eligendi ullam aliquam dolorum corporis animi, iste ipsum ducimus dolor perspiciatis adipisci ipsam dolores voluptatibus inventore quae, unde et quas voluptate maiores obcaecati! Excepturi, itaque dolore libero blanditiis numquam, provident eum veritatis porro enim necessitatibus, maiores quo quos illum sunt maxime perferendis eveniet aliquam. Doloribus aut culpa eum neque, corporis sint facere, odit voluptas odio modi ullam tenetur eveniet! In ullam voluptate provident facere aut nesciunt quidem earum! Iure, debitis a veritatis nemo eum voluptates perspiciatis harum veniam dolores tempore voluptatem, provident molestiae est cupiditate praesentium sapiente. Ullam, in, ea sequi a voluptatibus nulla laboriosam ratione deserunt ex voluptatem alias animi facere molestiae pariatur sunt vero. Aperiam architecto, porro ducimus delectus iure, similique quasi vero iusto dignissimos consequatur modi minima et pariatur tenetur, debitis cum dolore! Cum animi pariatur rem modi at nulla, explicabo ex iste earum esse deleniti sit quae tenetur non doloremque. Modi dolorem minima molestiae non nostrum, neque exercitationem voluptas distinctio architecto. Repellendus odio cum, mollitia tempore vel, quis expedita sint perferendis recusandae excepturi est quam praesentium consectetur modi minus totam impedit ad aut nemo labore officiis? Vero, nobis amet tempora dolores totam corporis veniam numquam. Sapiente hic accusantium consequatur assumenda nam possimus veritatis nihil perspiciatis debitis rem ea dicta, doloribus sint explicabo tempora doloremque. Adipisci beatae libero minus tenetur a distinctio eum voluptates sit maxime debitis quo, sapiente nostrum quam placeat reiciendis itaque, deserunt facilis! Aspernatur optio corrupti aperiam officia rem accusamus atque, culpa placeat mollitia aliquam deserunt quaerat labore quam dolorum earum dolore illo minus quo harum maiores tempore ullam eos natus. Velit fuga vero aliquam aliquid!
         </p>
     </div>
     <!-- Responsive images and centering --> 
@@ -38,5 +42,79 @@
 <footer>
     <p>I need sleep</p>
 </footer>
+
+<dialog>
+  <img src="https://native-dialog.surge.sh/location-service.svg" alt="Illustration of Location Services" />
+  <h2 id="dialog_title" class="h2">Use location services?</h2>
+  <p id="dialog_description">
+    In order to give directional instructions, we kindly ask you to turn
+    on the location services.
+  </p>
+
+  <style>
+    .myform {
+      margin: 30px;
+    }
+    .myForm input {
+      margin:20px;
+      padding: 10px;
+      border-radius: 2%;
+      border-left: 10px solid white;
+      background-color: white;
+      transition: background-color 0.5s;
+    }
+    /* .myForm input:required {
+      background-color: aqua;
+    } */
+    .myForm input:invalid {
+      border-left-color: tomato;
+      background-color: peachpuff;
+    }
+    .myForm input:valid {
+      border-left-color: springgreen;
+    }
+    .myForm input:focus {
+      background-color: white;
+    }
+  </style>
+
+  <form class="myForm" method="get">
+    <label for="username">Enter your name:</label>
+    <input
+    type="text"
+    name="username"
+    autocomplete="name"
+    id="field"
+    placeholder="Name here"
+    minlength="2"
+    required
+    />
+    <label for="pwd">Enter password</label>
+    <input
+    type="password"
+    name="pwd"
+    id="passfield"
+    placeholder="abcd"
+    pattern="^(?!.*[\s])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+    placeholder="Password here"
+    />
+    <label for="email">Enter email</label>
+    <input
+    type="email"
+    name="yourEmail"
+    id="yourEmail"
+    pattern=".+@metropolia\.fi"
+    placeholder="abcd@metropolia.fi"
+    required
+  />
+    <input type="submit" value="Submit" />
+  </form>
+
+  <div class="flex flex-space-between">
+    <button id="close_dialog">I don't think so</button>
+    <button id="confirm_dialog" class="cta">Confirm</button>
+  </div>
+</dialog>
+
 </body>
 </html>
