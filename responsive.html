@@ -41,6 +41,24 @@ p {
     h2 {
         display: none;
     }
+    h1 {
+      text-align: center;
+    }
+    #napster {
+      width:100%;
+      max-width: 600px;
+      margin: auto;
+      display: block;
+    }
+    #napster2 {
+      height:200px;
+      width:100%;
+      max-width: 500px;
+      margin: auto;
+      display: block;
+      object-fit: cover;
+      background-color: aliceblue;
+    }
 }
 
 /* @media only print and (min-width: 600px) {
@@ -59,8 +77,14 @@ p {
 <body>
 <main>
     <p>Resize the browser window. When the width of this document is 600 pixels or less, the background-color is "lightblue", otherwise it is "lightgreen".</p>
-    <h1>otsikko</h1>
-    <h2>this is h2 :)</h2>
+    <h1>max-width and margin:auto pic</h1>
+
+    <img src="img/napster.jpg" alt="napster" id="napster" width="300"/>
+
+    <h2>this is h2 and it will hide :)</h2>
+
+    <img src="img/napster.jpg" alt="napster" id="napster2" width="300"/>
+
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat officiis tenetur quae ratione, modi fugiat quas deserunt earum. Libero veritatis unde ea, architecto voluptate fugit officia animi, voluptates iure est sapiente? Sequi ducimus culpa dolorem sed, omnis quam deleniti commodi deserunt, voluptate aliquam possimus! Atque reprehenderit incidunt libero rem cupiditate!</p>
 </main>
 </body>
